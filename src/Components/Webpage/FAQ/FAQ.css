@@ -1,0 +1,191 @@
+/* Mobile-first approach */
+.faq-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff; /* Light mode background */
+  color: white; /* Light mode text color */
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-section .section-title h2 {
+  color: white; /* Light mode heading color */
+}
+
+.section-title p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.faq-section .section-title p {
+  color: white; /* Light mode paragraph color */
+}
+
+.faq-container {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+/* FAQ Item */
+.faq-item {
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15); /* Light mode background */
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  padding: 18px;
+  background: #00000026; /* Light mode question background */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #333; /* Light mode text color */
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #404eed4a; /* Light mode hover background */
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #0000000c; /* Light mode answer background */
+  color: #333; /* Light mode text color */
+}
+
+.faq-item.active .faq-answer {
+  padding: 20px;
+  max-height: 250px;
+}
+/* Dark mode styles */
+[data-theme="dark"] .faq-section {
+  background: #06080d; /* Pure black background */
+  color: var(--text); /* Use white text for dark mode */
+}
+
+[data-theme="dark"] .faq-section .section-title h2 {
+  color: var(--text); /* White heading color for dark mode */
+}
+
+[data-theme="dark"] .faq-section .section-title p {
+  color: #aaa; /* Lighter paragraph color for dark mode */
+}
+
+[data-theme="dark"] .faq-item {
+  background: rgba(255, 255, 255, 0.1); /* Darker background for FAQ items */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Lighter border for dark mode */
+}
+
+[data-theme="dark"] .faq-question {
+  background: rgba(255, 255, 255, 0.2); /* Darker background for question */
+  color: var(--text); /* White text for dark mode */
+}
+
+[data-theme="dark"] .faq-question:hover {
+  background: #fe95f64a; /* Lighter hover background for dark mode */
+}
+
+[data-theme="dark"] .faq-answer {
+  background: rgba(0, 0, 0, 0.055); /* Darker background for answer */
+  color: var(--text); /* White text for dark mode */
+}
+
+/* Tablet (iPad) Styles */
+@media (min-width: 600px) {
+  .faq-section {
+    padding: 80px 30px;
+  }
+
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .faq-container {
+    max-width: 80%;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .faq-section {
+    padding: 100px 40px;
+  }
+
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .faq-container {
+    max-width: 800px;
+  }
+
+  .faq-question {
+    font-size: 1.2rem;
+  }
+
+  .faq-answer {
+    font-size: 1.1rem;
+  }
+}
+
+/* Dark mode specific styles for h1 */
+[data-theme="dark"] .tnlu {
+
+  opacity: 1; /* Set opacity to 1 to make it visible */
+  animation: gradientAnimation 10s ease infinite; /* Slower gradient animation */
+
+  background: linear-gradient(270deg, #404eed, #fe95f6, #ff6f91, #a77bff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Keep this for gradient effect */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

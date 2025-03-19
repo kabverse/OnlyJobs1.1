@@ -1,0 +1,11 @@
+html {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #1c001e;
+}
+
+html[data-theme="dark"] {
+   background-color: #00111e;
+}
