@@ -536,6 +536,7 @@ body {
 /* Add specific mobile styles for smaller screens */
 @media (max-width: 600px) {
     .feed-container {
+        display: block;
         padding: 12px;
     }
 

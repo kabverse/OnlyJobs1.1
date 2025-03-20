@@ -429,6 +429,31 @@ const JobSeekerProfile = () => {
                         </div>
                     )}
                 </main>
+                {/* Mobile Navigation */}
+            <div className="mobile-nav">
+                <div className="mobile-nav-links">
+                    <Link to="/feed" className="mobile-nav-link active">
+                        <span className="mobile-nav-icon">🏠</span>
+                        <span>Feed</span>
+                    </Link>
+                    <Link to="/search" className="mobile-nav-link">
+                        <span className="mobile-nav-icon">🔍</span>
+                        <span>Search</span>
+                    </Link>
+                    <Link to="/messages" className="mobile-nav-link">
+                        <span className="mobile-nav-icon">💬</span>
+                        <span>Messages</span>
+                    </Link>
+                    <Link to="/notifications" className="mobile-nav-link">
+                        <span className="mobile-nav-icon">🔔</span>
+                        <span>Notifications</span>
+                    </Link>
+                    <Link to="/profile" className="mobile-nav-link">
+                        <span className="mobile-nav-icon">👤</span>
+                        <span>Profile</span>
+                    </Link>
+                </div>
+            </div>
             </div>
         </>
     );

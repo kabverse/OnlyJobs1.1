@@ -34,6 +34,9 @@ import Nitro from "./Components/Footer-links/Nitro/Nitro.tsx";
 import JobProviderComponent from "./Components/JobProvider/JobProvider.tsx";
 import NotFound from "./Components/NotFound/NotFound.jsx";
 
+// // ✅ Import the OnlyJobsVideo Component
+import OnlyJobsVideo from "./Components/Webpage/OnlyJobsVideo/OnlyJobsVideo.jsx";
+
 // Layout component to handle navbar visibility
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -134,6 +137,12 @@ const App = () => {
 
           {/* ✅ Dashboard (JobProvider) Route */}
           <Route path="/dashboard/*" element={<JobProviderComponent />} />
+
+          {/* ✅ OnlyJobsVideo Route */}
+          { <Route
+            path="/video"
+            element={<OnlyJobsVideo />}
+          /> }
 
           <Route path="*" element={<NotFound />} />
         </Routes>

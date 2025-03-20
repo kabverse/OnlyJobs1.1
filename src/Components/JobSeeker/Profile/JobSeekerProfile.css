@@ -148,7 +148,7 @@
 
 .profile-cover {
     height: 200px;
-    background-image: url("./banner.png");
+    background-image: url("./banner.jpeg");
     background-size: cover;
     position: relative;
 }
@@ -591,6 +591,7 @@
 
 @media (max-width: 768px) {
     .profile-container {
+        display: block;
         grid-template-columns: 1fr;
     }
 
